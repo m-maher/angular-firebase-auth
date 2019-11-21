@@ -1,0 +1,8 @@
+.dashboard {
+    margin-top: 200px;
+}
+
+.dashboard .container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

@@ -1,8 +1,14 @@
 
-<div id="navbar" >
-    <ul class="nav navbar-nav navbar-right mr-auto">
-        <li><a href="" (click)="authService.logout()">Logout</a></li>
-    </ul>
-</div>    
+<section class="dashboard">
+    <div class="container">
+        <div class="text-center">
+            <div class="my-5">
+                <button class="btn btn-primary" (click)="authService.logout()">Logout</button>
+            </div>
+            <div class="my-5">
+                <h1>Welcome</h1>
+            </div>
+        </div>
+    </div>
+</section>
 
-<p>Hello World</p>

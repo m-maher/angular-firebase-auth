@@ -15,17 +15,14 @@ export class LoginComponent implements OnInit {
     password: ''
   }
 
-  constructor(private _authService: AuthService, private _router: Router) { 
-  }
+  constructor(private _authService: AuthService, private _router: Router) {}
 
   signInWithEmail() {
     return this._authService.signInRegular(this.user.email, this.user.password)
-       .then((res) => {
-          console.log(res);
-    
+       .then(() => {
           this._router.navigate(['dashboard']);
        })
-       .catch((err) => console.log('error: ' + err));
+       .catch((err) => alert(err));
   }
 
   signInWithGoogle() {
@@ -33,7 +30,7 @@ export class LoginComponent implements OnInit {
     .then(() => {
       this._router.navigate(['dashboard'])
     })
-    .catch((err) => console.log(err))
+    .catch((err) => alert(err))
   }
 
   signInWithFacebook() {
@@ -41,7 +38,7 @@ export class LoginComponent implements OnInit {
     .then(() => {
       this._router.navigate(['dashboard'])
     })
-    .catch((err) => console.log(err))
+    .catch((err) => alert(err))
   }
 
   signInWithGithub() {
@@ -49,7 +46,7 @@ export class LoginComponent implements OnInit {
     .then(() => {
       this._router.navigate(['dashboard'])
     })
-    .catch((err) => console.log(err))
+    .catch((err) => alert(err))
   }
 
   signInWithTwitter() {
@@ -57,10 +54,8 @@ export class LoginComponent implements OnInit {
     .then(() => {
       this._router.navigate(['dashboard'])
     })
-    .catch((err) => console.log(err))
+    .catch((err) => alert(err))
   }
-
-
 
   ngOnInit() {
   }
